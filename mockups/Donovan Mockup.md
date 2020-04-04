@@ -1,4 +1,4 @@
-# Website Design
+## Website Design
 
 #### Login / Register
 ![](./img/loginregister.png)
@@ -14,3 +14,8 @@
 
 #### Post Review
 ![](./img/post_review.png)
+
+
+## Diagram
+
+![](./img/donovan_design.jpg)
