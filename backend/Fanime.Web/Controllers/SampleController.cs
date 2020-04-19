@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AnimeLister.Web.Controllers
+namespace Fanime.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

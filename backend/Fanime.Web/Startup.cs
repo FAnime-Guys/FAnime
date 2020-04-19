@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
-namespace AnimeLister.Web
+namespace Fanime.Web
 {
     public class Startup
     {
@@ -19,7 +19,7 @@ namespace AnimeLister.Web
 
             services.AddSwaggerGen(opt =>
             {
-                opt.SwaggerDoc("v1", new OpenApiInfo { Title = "Anime Lister", Version = "v1" });
+                opt.SwaggerDoc("v1", new OpenApiInfo { Title = "Fanime", Version = "v1" });
             });
         }
 
@@ -35,7 +35,7 @@ namespace AnimeLister.Web
             app.UseSwagger();
             app.UseSwaggerUI(opt =>
             {
-                opt.SwaggerEndpoint("/swagger/v1/swagger.json", "Anime Lister v1");
+                opt.SwaggerEndpoint("/swagger/v1/swagger.json", "Fanime v1");
             });
 
             app.UseEndpoints(endpoints =>
