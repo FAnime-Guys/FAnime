@@ -5,6 +5,18 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fanime.Web", "Fanime.Web\Fanime.Web.csproj", "{88D02D2E-F006-4403-864C-AFED327D142E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{CCF6B660-5EA9-4C2F-8633-5975A0B74234}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{01EC4F8F-4945-4C32-97F8-D6EB71E79171}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{2DB438D9-97E2-4150-98D2-EBF25F45BF2B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A8C0724F-F57F-40E7-B37E-0720BD33AB26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanime.Persistence", "Fanime.Presentation\Fanime.Persistence.csproj", "{48799CC1-8EFC-49FC-A0CE-94C595C4040E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fanime.Domain", "Fanime.Domain\Fanime.Domain.csproj", "{B67DCD86-0885-4401-B222-AEACCFA041D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +27,22 @@ Global
 		{88D02D2E-F006-4403-864C-AFED327D142E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88D02D2E-F006-4403-864C-AFED327D142E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88D02D2E-F006-4403-864C-AFED327D142E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48799CC1-8EFC-49FC-A0CE-94C595C4040E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48799CC1-8EFC-49FC-A0CE-94C595C4040E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48799CC1-8EFC-49FC-A0CE-94C595C4040E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48799CC1-8EFC-49FC-A0CE-94C595C4040E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B67DCD86-0885-4401-B222-AEACCFA041D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B67DCD86-0885-4401-B222-AEACCFA041D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B67DCD86-0885-4401-B222-AEACCFA041D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B67DCD86-0885-4401-B222-AEACCFA041D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{88D02D2E-F006-4403-864C-AFED327D142E} = {2DB438D9-97E2-4150-98D2-EBF25F45BF2B}
+		{48799CC1-8EFC-49FC-A0CE-94C595C4040E} = {01EC4F8F-4945-4C32-97F8-D6EB71E79171}
+		{B67DCD86-0885-4401-B222-AEACCFA041D9} = {CCF6B660-5EA9-4C2F-8633-5975A0B74234}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {303A68C2-9018-4C3F-81D7-532F987F19A0}
