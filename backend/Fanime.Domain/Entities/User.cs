@@ -5,7 +5,15 @@ namespace Fanime.Domain.Entities
 {
     public class User
     {
+        public User()
+        {
+            Friends = new HashSet<Friends>();
+            Reviews = new HashSet<Review>();
+        }
+
         public int Id { get; set; }
+
+        public string Image { get; set; } // Profile Picture
 
         public string Email { get; set; }
         
@@ -15,7 +23,7 @@ namespace Fanime.Domain.Entities
 
         public string Location { get; set; }
 
-        public string Bio { get; set; }
+        public string Biography { get; set; }
 
         public DateTime? DateOfBirth { get; set; }
 
@@ -29,6 +37,8 @@ namespace Fanime.Domain.Entities
         // Collections
 
         public IEnumerable<Friends> Friends { get; set; }
+        public IEnumerable<Review> Reviews { get; set; }
+        public IEnumerable<CollectionItem> Collections { get; set; }
     }
 
     

@@ -1,4 +1,6 @@
-﻿namespace Fanime.Domain.Entities
+﻿using System.Collections.Generic;
+
+namespace Fanime.Domain.Entities
 {
     public class VoiceActor
     {
@@ -7,6 +9,6 @@
         public string Firstname { get; set; }
         public string LastName { get; set; }
 
-
+        public IEnumerable<VoiceActorDetail> VoiceActorDetails { get; set; }
     }
 }

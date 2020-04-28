@@ -10,5 +10,7 @@ namespace Fanime.Domain.Entities
 
         public string Firstname { get; set; }
         public string Lastname { get; set; }
+
+        public IEnumerable<AuthorDetail> AuthorDetails { get; set; }
     }
 }

@@ -3,11 +3,8 @@ using System.Collections.Generic;
 
 namespace Fanime.Domain.Entities
 {
-    public class Anime
+    public class Anime : CollectionBase
     {
-        public int Id { get; set; }
-
-        
         public string Title { get; set; } // English / Common Name?
 
         public string Kanji { get; set; } // Japanese Kanji
@@ -24,6 +21,8 @@ namespace Fanime.Domain.Entities
         public DateTime EndDate { get; set; }
 
         public IEnumerable<Episode> Episodes { get; set; }
+        public IEnumerable<Character> Characters { get; set; }
+        public IEnumerable<ProducerStudioDetail> ProducerStudioDetails { get; set; }
 
     }
 

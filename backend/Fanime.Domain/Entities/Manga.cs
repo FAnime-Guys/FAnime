@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace Fanime.Domain.Entities
 {
-    public class Manga
+    public class Manga : CollectionBase
     {
-        public int Id { get; set; }
-
         public string Title { get; set; } // English / Common Name?
         public string Kanji { get; set; } // Japanese Kanji
         public string Romanji { get; set; } // Japanese Romanji
@@ -17,5 +15,7 @@ namespace Fanime.Domain.Entities
         public DateTime EndDate { get; set; }
 
         public IEnumerable<Chapter> Chapters { get; set; }
+        public IEnumerable<Character> Characters { get; set; }
+        public IEnumerable<AuthorDetail> AuthorDetails { get; set; }
     }
 }
