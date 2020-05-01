@@ -17,11 +17,10 @@ namespace Fanime.Domain.Entities
 
         public AnimeType Type { get; set; }
 
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
         public IEnumerable<Episode> Episodes { get; set; }
-        public IEnumerable<Character> Characters { get; set; }
         public IEnumerable<ProducerStudioDetail> ProducerStudioDetails { get; set; }
 
     }

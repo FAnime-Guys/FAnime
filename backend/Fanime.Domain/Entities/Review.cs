@@ -6,7 +6,7 @@ namespace Fanime.Domain.Entities
 {
     public class Review
     {
-        public int ReviewId { get; set; }
+        public int Id { get; set; }
         
         public int UserId { get; set; }
         public User User { get; set; }
