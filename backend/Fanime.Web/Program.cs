@@ -37,6 +37,12 @@ namespace Fanime.Web
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+            .ConfigureWebHostDefaults(webBuilder => 
+            {
+                webBuilder
+                    .UseContentRoot(Directory.GetCurrentDirectory())
+                    .UseStartup<Startup>();
+            })
             .ConfigureAppConfiguration((hostingContext, config) =>
             {
                 config
@@ -44,12 +50,6 @@ namespace Fanime.Web
                     .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                     .AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", optional: true, reloadOnChange: true)
                     .AddEnvironmentVariables();
-            })
-            .ConfigureWebHostDefaults(webBuilder => 
-            {
-                webBuilder
-                    .UseContentRoot(Directory.GetCurrentDirectory())
-                    .UseStartup<Startup>();
             });
     }
 }

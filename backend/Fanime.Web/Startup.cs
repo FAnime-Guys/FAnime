@@ -10,16 +10,32 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Fanime.Web.Services;
+using Fanime.Persistence;
+using Microsoft.Extensions.Configuration;
 
 namespace Fanime.Web
 {
     public class Startup
     {
+        public Startup(IConfiguration configuration, IWebHostEnvironment environment)
+        {
+            Configuration = configuration;
+            Environment = environment;
+        }
+
+        public IConfiguration Configuration { get; }
+
+        public IWebHostEnvironment Environment { get; set; }
+
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddPersistence(Configuration);
+
             services.AddScoped<ICurrentUserService, CurrentUserService>();
 
             services.AddHttpContextAccessor();
+
+            services.AddMvc();
 
             services.AddSwaggerGen(opt =>
             {
