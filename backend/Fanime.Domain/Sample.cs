@@ -1,8 +1,9 @@
 ﻿using System.Linq;
+using Fanime.Domain.Entities;
 
 namespace Fanime.Domain
 {
-    using Entities;
+    
 
     class Sample
     {
@@ -46,20 +47,22 @@ namespace Fanime.Domain
         {
             var Donovan = new User { Id = 1, DisplayName = "Donovan" };
 
-            var character = new Character { Id = 1, Firstname = "Yumeko", Lastname = "Jabami" };
+            var anime = new Anime { Id = 1, Title = "Kakegurui", Type = AnimeType.TV };
+            var manga = new Manga { Id = 1, Title = "Kakegurui Joker" };
 
-            var anime = new Anime { Id = 1, Title = "Kakegurui", Type = AnimeType.TV, Characters = new[] { character } };
-            var manga = new Manga { Id = 1, Title = "Kakegurui Joker", Characters = new[] { character } };
-
-            var characterCI = new CollectionItem { Id = 1, UserId = 1, User = Donovan, EntityId = 1, Entity = character };
             var animeCI = new CollectionItem { Id = 2, UserId = 1, User = Donovan, EntityId = 1, Entity = anime, Status = CollectionStatus.Completed };
             var mangaCI = new CollectionItem { Id = 3, UserId = 1, User = Donovan, EntityId = 1, Entity = manga, Status = CollectionStatus.PlanToRead };
 
-            Donovan.Collections = new[] { characterCI, animeCI, mangaCI };
+            Donovan.Collections = new[] { animeCI, mangaCI };
+
+            // Instead have separate favourite lists for these
+            // Donovan.Characters
+            // Donovan.Authors
+            // Donovan.Studios (Maybe this can be shared with producers)
+            // Donovan.Producers
 
             var animeCount = Donovan.Collections.Count(c => c.Entity.GetType() == typeof(Anime));
             var mangaCount = Donovan.Collections.Count(c => c.Entity.GetType() == typeof(Manga));
-            var characterCount = Donovan.Collections.Count(c => c.Entity.GetType() == typeof(Character));
         }
     }
 }
