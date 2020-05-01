@@ -14,7 +14,7 @@ namespace Fanime.Persistence.Infrastructure
 
         public TContext CreateDbContext(string[] args)
         {
-            var basePath = Directory.GetCurrentDirectory() + string.Format("{0}..{0}Web", Path.DirectorySeparatorChar);
+            var basePath = Directory.GetCurrentDirectory() + string.Format("{0}..{0}Fanime.Web", Path.DirectorySeparatorChar);
             return Create(basePath, Environment.GetEnvironmentVariable(AspNetCoreEnvironment));
         }
 
@@ -47,7 +47,7 @@ namespace Fanime.Persistence.Infrastructure
 
             var optionsBuilder = new DbContextOptionsBuilder<TContext>();
 
-            optionsBuilder.UseMySQL(connectionString);
+            optionsBuilder.UseMySQL(connectionString, options => options.MigrationsHistoryTable("ef_migrations"));
 
             return CreateNewInstance(optionsBuilder.Options);
         }
