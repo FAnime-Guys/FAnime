@@ -6,8 +6,8 @@ namespace Fanime.Domain.Entities
     {
         public int Id { get; set; }
 
-        public IEnumerable<CollectionCharacter> CollectionCharacters { get; set; }
-        public IEnumerable<Review> Reviews { get; set; }
-        public IEnumerable<CollectionItem> Collections { get; set; }
+        public virtual IEnumerable<CollectionCharacter> CollectionCharacters { get; set; }
+        public virtual IEnumerable<Review> Reviews { get; set; }
+        public virtual IEnumerable<CollectionItem> Collections { get; set; }
     }
 }

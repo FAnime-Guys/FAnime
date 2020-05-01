@@ -20,8 +20,8 @@ namespace Fanime.Domain.Entities
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
 
-        public IEnumerable<Episode> Episodes { get; set; }
-        public IEnumerable<ProducerStudioDetail> ProducerStudioDetails { get; set; }
+        public virtual IEnumerable<Episode> Episodes { get; set; }
+        public virtual IEnumerable<ProducerStudioDetail> ProducerStudioDetails { get; set; }
 
     }
 

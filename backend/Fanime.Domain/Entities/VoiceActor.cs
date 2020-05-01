@@ -7,8 +7,8 @@ namespace Fanime.Domain.Entities
         public int Id { get; set; }
 
         public string Firstname { get; set; }
-        public string LastName { get; set; }
+        public string Lastname { get; set; }
 
-        public IEnumerable<VoiceActorDetail> VoiceActorDetails { get; set; }
+        public virtual IEnumerable<VoiceActorDetail> VoiceActorDetails { get; set; }
     }
 }

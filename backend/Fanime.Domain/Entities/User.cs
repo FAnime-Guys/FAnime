@@ -7,8 +7,9 @@ namespace Fanime.Domain.Entities
     {
         public User()
         {
-            Friends = new HashSet<Friends>();
+            Friends = new HashSet<UserFriend>();
             Reviews = new HashSet<Review>();
+            Collections = new HashSet<CollectionItem>();
         }
 
         public int Id { get; set; }
@@ -36,9 +37,9 @@ namespace Fanime.Domain.Entities
 
         // Collections
 
-        public IEnumerable<Friends> Friends { get; set; }
-        public IEnumerable<Review> Reviews { get; set; }
-        public IEnumerable<CollectionItem> Collections { get; set; }
+        public virtual IEnumerable<UserFriend> Friends { get; set; }
+        public virtual IEnumerable<Review> Reviews { get; set; }
+        public virtual IEnumerable<CollectionItem> Collections { get; set; }
     }
 
     

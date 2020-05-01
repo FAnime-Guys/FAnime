@@ -4,13 +4,13 @@
     {
         public int Id { get; set; }
         
-        public int EntityId { get; set; }
-        public CollectionBase Entity { get; set; }
+        public int CollectionId { get; set; }
+        public CollectionBase Collection { get; set; }
 
         public int UserId { get; set; }
         public User User { get; set; }
 
-        public CollectionStatus? Status { get; set; }
+        public CollectionStatus Status { get; set; }
     }
 
     public enum CollectionStatus

@@ -16,7 +16,7 @@ namespace Fanime.Domain.Entities
         //public DateTime? EndDate { get; set; }
 
         // How do volumes fit into this picture?
-        public IEnumerable<Chapter> Chapters { get; set; }
-        public IEnumerable<AuthorDetail> AuthorDetails { get; set; }
+        public virtual IEnumerable<Chapter> Chapters { get; set; }
+        public virtual IEnumerable<AuthorDetail> AuthorDetails { get; set; }
     }
 }
